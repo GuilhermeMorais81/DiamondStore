@@ -19,20 +19,19 @@
 - `Postman`
 - `ASP.NET Core`
 
-## Banco de dados
+## Banco de Dados
 
-Esse projeto utiliza o Sqlite para armazenar registros. Foi escolhido porque é menos custoso em questão de recursos e dispensa as configurações de outros bancos de dados como Microsoft SQL Server ou PostgreSQL, de tal maneira que facilita o uso do projeto. O banco de dados pode ser gerado por meio do migrations do Entity Framework dessa forma:
+Esse projeto utiliza o Sqlite para armazenar registros. Foi escolhido porque é menos custoso em questão de recursos e dispensa as configurações de outros bancos de dados como Microsoft SQL Server ou PostgreSQL, de tal maneira que facilita o uso do projeto. O banco de dados é o arquivo `app.db`, encontrado no diretorio raiz do projeto.
+
+## Configuração do projeto
+
+Para configurar o projeto:
 
 - 1. Clonar o repositorio
 >    ```Bash
 >    git clone https://github.com/GuilhermeMorais81/DiamondStore.git
 >    ```
 - 2. Possuir o .NET 10.0 instalado (Disponivel em https://dotnet.microsoft.com/pt-br/download)
-
-- 3. Instalar uma ferramenta do proprio .NET chamada dotnet-ef
->    ```Bash
->    dotnet tool install --global dotnet-ef
->    ```
 
 - 4. instalar as dependencias do projeto
 >    ```Bash
@@ -44,16 +43,11 @@ Esse projeto utiliza o Sqlite para armazenar registros. Foi escolhido porque é 
 >    dotnet build
 >    ```
 
-- 6. Criar o banco de dados
->``` bash
->   dotnet ef database update
->```
-Apartir disso, o banco de dados já deve ter sido criado. Basta checar se o arquivo `app.db` foi incluido no diretorio raiz do projeto.
-
 ## Como testar
 
-* Como dito na introdução, essa API fornece um CRUD como operações. Nessa seção será disponibilizado as routes para essas operações além de mostrar exemplos de requisições.
-* Durante o desenvolvimento, foi utilizado o Postman para testar as requisições, e pode ser muito bem utilizado para testar esse projeto também.
+* Como dito na introdução, essa API fornece um CRUD como operações. Nessa seção será disponibilizado as routes para essas operações.
+* Durante o desenvolvimento, foi utilizado o Postman para testar as requisições, e recomenda-se utiliza-lo para testar esse projeto também.
+* Para adicionar novos jogos, pode ser utilizada [essa ferramenta](https://guidgenerator.com/tools/uuid-v4-generator) para gerar o campo do Id.
 
 ### Executando a aplicação
 
@@ -80,8 +74,8 @@ Apartir disso, o banco de dados já deve ter sido criado. Basta checar se o arqu
     ````json
         {
             "Id": "0a07e361-45e9-4c85-9983-197191f95192",
-            "Title": "Resident Evil 4",
-            "ReleaseDate": "2005-01-11"
+            "Title": "Metal Gear Solid V: Ground Zeroes",
+            "ReleaseDate": "2014-03-18"
         }
     ````
 
